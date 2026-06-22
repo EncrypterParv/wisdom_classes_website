@@ -58,12 +58,7 @@ export default function Footer() {
             <li>
               <Link to="/contact" className="hover:text-gold transition-colors duration-300">Contact & Inquiries</Link>
             </li>
-            <li>
-              <a href="#about" className="hover:text-gold transition-colors duration-300">About Somesh Sir</a>
-            </li>
-            <li>
-              <a href="#testimonials" className="hover:text-gold transition-colors duration-300">Student Success stories</a>
-            </li>
+            
           </ul>
         </div>
 
