@@ -1,26 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
-@theme {
-  --color-cream-light: #FAF9F6;
-  --color-cream: #FAF6EE;
-  --color-cream-dark: #F3EDE0;
+:root {
+  --bg-cream: #FAF6EE;
+  --bg-cream-light: #FAF9F6;
+  --bg-cream-dark: #F3EDE0;
+  --bg-white: #FFFFFF;
   
+  --color-forest-primary: #1b3e2b;
   --color-forest-light: #2a5a3f;
-  --color-forest: #1b3e2b;
   --color-forest-dark: #11281b;
   
+  --color-gold-primary: #d4af37;
   --color-gold-light: #e6c865;
-  --color-gold: #d4af37;
   --color-gold-dark: #b08e28;
   
+  --color-charcoal-primary: #2c3531;
   --color-charcoal-light: #424f4a;
-  --color-charcoal: #2c3531;
   --color-charcoal-dark: #1b211e;
+  --color-muted-text: #6B7280;
+  
+  --border-glow: rgba(27, 62, 43, 0.1);
+}
+
+.dark {
+  --bg-cream: #0D1117;
+  --bg-cream-light: #161B22;
+  --bg-cream-dark: #0a0d12;
+  --bg-white: #1C2330;
+  
+  --color-forest-primary: #D4A373;
+  --color-forest-light: #e0b48b;
+  --color-forest-dark: #b88a5c;
+  
+  --color-gold-primary: #D4A373;
+  --color-gold-light: #E9C46A;
+  --color-gold-dark: #A67C52;
+  
+  --color-charcoal-primary: #C9D1D9;
+  --color-charcoal-light: #F8F5F0;
+  --color-charcoal-dark: #f0f2f5;
+  --color-muted-text: #8B949E;
+  
+  --border-glow: rgba(212, 163, 115, 0.15);
+}
+
+@theme {
+  --color-cream: var(--bg-cream);
+  --color-cream-light: var(--bg-cream-light);
+  --color-cream-dark: var(--bg-cream-dark);
+  
+  --color-white: var(--bg-white);
+  
+  --color-forest: var(--color-forest-primary);
+  --color-forest-light: var(--color-forest-light);
+  --color-forest-dark: var(--color-forest-dark);
+  
+  --color-gold: var(--color-gold-primary);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-dark: var(--color-gold-dark);
+  
+  --color-charcoal: var(--color-charcoal-primary);
+  --color-charcoal-light: var(--color-charcoal-light);
+  --color-charcoal-dark: var(--color-charcoal-dark);
   
   --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", Inter, sans-serif;
+  --font-sans: "Inter", sans-serif;
   
   --animate-infinite-scroll: infinite-scroll 40s linear infinite;
 
@@ -32,79 +76,78 @@
 
 @layer base {
   body {
-    @apply bg-cream text-charcoal font-sans antialiased overflow-x-hidden transition-colors duration-300;
-    background-color: var(--color-cream);
+    @apply bg-cream text-charcoal font-sans antialiased overflow-x-hidden;
+    background-color: var(--bg-cream);
+    color: var(--color-charcoal-primary);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+    color: var(--color-charcoal-light);
+  }
+  
+  /* Smooth transitions for theme switching */
+  body, nav, section, div, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select, span {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 350ms;
   }
 }
 
-/* Dark theme color overrides */
-.dark {
-  --color-cream-light: #161f30;
-  --color-cream: #0b0f19;
-  --color-cream-dark: #070a10;
-  
-  --color-white: #111a2e;
-  
-  --color-forest-light: #60a5fa;
-  --color-forest: #3b82f6;
-  --color-forest-dark: #1d4ed8;
-  
-  --color-gold-light: #fde047;
-  --color-gold: #e5c158;
-  --color-gold-dark: #ca8a04;
-  
-  --color-charcoal-light: #94a3b8;
-  --color-charcoal: #cbd5e1;
-  --color-charcoal-dark: #f8fafc;
-}
-
-/* Custom Scrollbar */
+/* Custom Scrollbar styled for Dual Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cream);
-  transition: background-color 300ms;
+  background: var(--bg-cream);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-forest);
+  background: var(--bg-cream-light);
+  border: 1px solid var(--border-glow);
   border-radius: 4px;
-  transition: background-color 300ms;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-forest-light);
+  background: var(--color-gold-primary);
 }
 
 /* Glassmorphism Styles */
 .glass {
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--bg-white);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  transition: background-color 300ms, border-color 300ms;
-}
-
-.dark .glass {
-  background: rgba(14, 16, 23, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glow);
 }
 
 .glass-dark {
-  background: rgba(27, 62, 43, 0.9);
+  background: var(--bg-cream-light);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background-color 300ms, border-color 300ms;
+  border: 1px solid var(--border-glow);
 }
 
-.dark .glass-dark {
-  background: rgba(0, 82, 204, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+/* Always-light text for elements with gold/forest backgrounds (buttons, badges) */
+/* This ensures text on colored backgrounds stays readable in both themes */
+.text-on-gold {
+  color: #FFF8F0 !important;
 }
+
+.text-on-forest {
+  color: #FFF8F0 !important;
+}
+
+/* Form inputs: use CSS variables so they theme correctly */
+.input-themed {
+  background-color: var(--bg-cream-light);
+  color: var(--color-charcoal-primary);
+  border-color: rgba(27, 62, 43, 0.1);
+}
+
+.dark .input-themed {
+  background-color: var(--bg-cream-light);
+  color: var(--color-charcoal-primary);
+  border-color: rgba(212, 163, 115, 0.15);
+}
+

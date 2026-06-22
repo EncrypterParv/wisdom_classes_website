@@ -64,7 +64,7 @@ const row2 = [
 
 function Card({ item }) {
   return (
-    <div className="w-[350px] md:w-[400px] shrink-0 bg-white p-8 rounded-3xl border border-forest/5 shadow-[0_10px_35px_rgba(27,62,43,0.02)] flex flex-col justify-between gap-6 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
+    <div className="w-[350px] md:w-[400px] max-w-[calc(100vw-3rem)] shrink-0 bg-white p-8 rounded-3xl border border-forest/5 shadow-[0_10px_35px_rgba(27,62,43,0.02)] flex flex-col justify-between gap-6 hover:border-gold/30 hover:shadow-lg transition-all duration-300">
       <div>
         <div className="flex gap-1 mb-4">
           {[...Array(5)].map((_, i) => (

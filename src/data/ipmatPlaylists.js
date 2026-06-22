@@ -46,7 +46,7 @@ export const ipmatPlaylists = [
     details: "Master interval notation, single/double variable inequalities, modulus inequalities, region mapping, and exam-oriented practice.",
     illustrationType: "quadratic",
     videoId: "1RS_5qiLIQg",
-    playlistUrl: "https://www.youtube.com/watch?v=1RS_5qiLIQg",
+    playlistUrl: "https://youtu.be/1RS_5qiLlQg?si=M3QS1vQaReTPdjFo",
     thumbnail: null
   }
 ];

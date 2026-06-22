@@ -136,7 +136,7 @@ export default function Contact() {
                     href="https://maps.google.com/?q=Wisdom+Classes+of+Mathematics+Shastri+Nagar+Meerut"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2 px-3 bg-forest hover:bg-forest-light text-cream font-sans font-medium text-xs rounded-xl shadow-md hover:shadow-lg text-center transition-all duration-300"
+                    className="flex-1 py-2 px-3 bg-forest hover:bg-forest-light text-on-forest font-sans font-medium text-xs rounded-xl shadow-md hover:shadow-lg text-center transition-all duration-300"
                   >
                     Open in Google Maps
                   </a>
@@ -287,7 +287,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-forest hover:bg-forest-light text-cream rounded-xl font-sans font-bold flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+                className="w-full py-4 bg-forest hover:bg-forest-light text-on-forest rounded-xl font-sans font-bold flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
               >
                 {isSubmitting ? (
                   <span>Submitting...</span>

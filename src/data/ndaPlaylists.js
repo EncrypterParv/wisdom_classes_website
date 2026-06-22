@@ -21,7 +21,7 @@ export const ndaPlaylists = [
     details: "Understand logarithmic properties, bases, transformation formulas, inequalities, and calculations targeted for the NDA written paper.",
     illustrationType: "logarithm",
     videoId: "Af9MRelICzQ",
-    playlistUrl: "https://www.youtube.com/watch?v=Af9MRelICzQ&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=3&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=Af9MRellCzQ&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=3&pp=iAQB",
     thumbnail: null
   },
   {
@@ -98,7 +98,7 @@ export const ndaPlaylists = [
     details: "Learn binomial coefficient properties, middle term calculations, greatest term, Pascal's triangle, and expansions for integer indexes.",
     illustrationType: "binomial",
     videoId: "MIsYy_CDQ7Y",
-    playlistUrl: "https://www.youtube.com/watch?v=MIsYy_CDQ7Y&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=10&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=MlsYy_CDQ7Y&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=10&t=1s&pp=iAQB",
     thumbnail: null
   },
 
@@ -122,7 +122,7 @@ export const ndaPlaylists = [
     details: "Understand general trigonometric solutions, sine/cosine rules, projection formulas, properties of triangles, and heights and distances.",
     illustrationType: "trig",
     videoId: "-mVIL-YIJnU",
-    playlistUrl: "https://www.youtube.com/watch?v=-mVIL-YIJnU&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=12&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=-mVlL-YlJnU&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=12&t=3s&pp=iAQB",
     thumbnail: null
   },
   {
@@ -196,7 +196,7 @@ export const ndaPlaylists = [
     details: "Master limits evaluation methods, sandwich theorem, standard limits equations, L'Hopital's Rule, and visual curves continuity.",
     illustrationType: "limits",
     videoId: "JuhL9u-3e0",
-    playlistUrl: "https://www.youtube.com/watch?v=JuhL9u-3e0&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=18&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=-JuhL9u-3e0&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=18&pp=iAQB",
     thumbnail: null
   },
   {
@@ -218,7 +218,7 @@ export const ndaPlaylists = [
     details: "Master differentiation rules, derivatives of composite functions, implicit differentiation, logarithmic differentiation, and second-order derivatives.",
     illustrationType: "derivative",
     videoId: "Z5IvWgJfjJs",
-    playlistUrl: "https://www.youtube.com/watch?v=Z5IvWgJfjJs&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=20&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=Z5lvWgJfjJs&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=20&t=1s&pp=iAQB",
     thumbnail: null
   },
 
@@ -288,7 +288,7 @@ export const ndaPlaylists = [
     details: "Master independent events, multiplication theorem, total probability theorem, Bayes' Theorem, and random variables probability distributions.",
     illustrationType: "probability",
     videoId: "sNooeb_XNA",
-    playlistUrl: "https://www.youtube.com/watch?v=sNooeb_XNA&list=PLh612HIcYw1UyfrMtK8pt2vTLb3Q0Vv80&index=4&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=9K9X59Vxl00&list=PLh612HIcYw1U6N7Vn9FSfmkb6KVmUvZ4-&index=26&pp=iAQB",
     thumbnail: null
   },
   {
@@ -368,7 +368,7 @@ export const nda2026Playlists = [
     details: "Master conditional probability, total probability theorem, and Bayes' Theorem applications for NDA.",
     illustrationType: "probability",
     videoId: "sNooeb_XNA",
-    playlistUrl: "https://www.youtube.com/watch?v=sNooeb_XNA&list=PLh612HIcYw1UyfrMtK8pt2vTLb3Q0Vv80&index=4&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=-sNooeb_XNA&list=PLh612HIcYw1UyfrMtK8pt2vTLb3Q0Vv80&index=4&t=1s&pp=iAQB",
     thumbnail: null
   },
   {
@@ -412,7 +412,7 @@ export const nda2026Playlists = [
     details: "Revise limits using factorization, rationalization, standard trigonometric limits, and L'Hopital's rule.",
     illustrationType: "limits",
     videoId: "JuhL9u-3e0",
-    playlistUrl: "https://www.youtube.com/watch?v=JuhL9u-3e0&list=PLh612HIcYw1U6N7Vn9FSmkb6KVmUvZ4-&index=18&pp=iAQB",
+    playlistUrl: "https://www.youtube.com/watch?v=ZpbTMi8ovv0&list=PLh612HIcYw1UyfrMtK8pt2vTLb3Q0Vv80&index=9&pp=iAQB",
     thumbnail: null
   },
   {

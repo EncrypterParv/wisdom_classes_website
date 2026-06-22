@@ -9,10 +9,10 @@ export const class11Playlists = [
     details: "Master the concept of neighborhood, left & right hand limits, standard limit theorems, sandwich theorem, evaluation methods, and continuity.",
     illustrationType: "limits",
     symbol: "lim x→a",
-    videoId: "OldCe3-rVv0",
-    playlistUrl: "https://www.youtube.com/watch?v=OldCe3-rVv0&list=PLkG0JIX8a6A48RWkwjQ1ERHXv2kXM1MU-",
+    videoId: "OIdCe3-rVv0",
+    playlistUrl: "https://www.youtube.com/watch?v=OIdCe3-rVv0&list=PLkG0JIX8a6A48RWkwjQ1ERHXv2kXM1MU-",
     category: "Calculus",
-    thumbnail: "https://i.ytimg.com/vi/OldCe3-rVv0/hqdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/OIdCe3-rVv0/maxresdefault.jpg"
   },
   {
     id: "derivative",
@@ -87,10 +87,10 @@ export const class11Playlists = [
     details: "Understand cartesian coordinates, slope of a line, various forms of straight line equations, angle between lines, distance of a point from a line.",
     illustrationType: "lines",
     symbol: "y = mx+c",
-    videoId: "5FlUyP88Tjk",
-    playlistUrl: "https://www.youtube.com/watch?v=5FlUyP88Tjk&list=PLkG0JIX8a6A6oCPc2KO4h9M0tIp4pEgxQ",
+    videoId: "5FlUyP881jk",
+    playlistUrl: "https://www.youtube.com/watch?v=5FlUyP881jk&list=PLkG0JIX8a6A6oCPc2KO4h9M0tlp4pEqxQ",
     category: "Geometry",
-    thumbnail: "https://i.ytimg.com/vi/5FlUyP88Tjk/hqdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/5FlUyP881jk/maxresdefault.jpg"
   },
   {
     id: "conic",
@@ -113,10 +113,10 @@ export const class11Playlists = [
     details: "Learn cartesian product of sets, relations, types of relations, definition of function, domain, co-domain, range, and standard real functions.",
     illustrationType: "relations",
     symbol: "f: A→B",
-    videoId: "1gDTcbwMIs4",
-    playlistUrl: "https://www.youtube.com/watch?v=1gDTcbwMIs4&list=PLkG0JIX8a6A5bLz8yv9JHTzHQu6fbnph2",
+    videoId: "1gDTcbwMls4",
+    playlistUrl: "https://www.youtube.com/watch?v=1gDTcbwMls4&list=PLkG0JIX8a6A5bLz8yv9JHTzHQu6fbnph2",
     category: "Algebra",
-    thumbnail: "https://i.ytimg.com/vi/1gDTcbwMIs4/hqdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/1gDTcbwMls4/maxresdefault.jpg"
   },
   {
     id: "complex",
@@ -139,9 +139,9 @@ export const class11Playlists = [
     details: "Master trigonometric angles, sign of ratios in quadrants, sum/difference formulas, multiple angles, general equations, and inverse functions.",
     illustrationType: "trig",
     symbol: "sin(x)",
-    videoId: "yITZG4Jjp3g",
-    playlistUrl: "https://www.youtube.com/watch?v=yITZG4Jjp3g&list=PLkG0JIX8a6A7s5CqF80Inv_KxjPsrMYdl",
+    videoId: "yITZG4Jip3g",
+    playlistUrl: "https://www.youtube.com/watch?v=yITZG4Jip3g&list=PLkG0JIX8a6A7s5CqF80Inv_KxjPsrMYdI",
     category: "Trigonometry",
-    thumbnail: "https://i.ytimg.com/vi/yITZG4Jjp3g/hqdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/yITZG4Jip3g/maxresdefault.jpg"
   }
 ];

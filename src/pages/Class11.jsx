@@ -232,7 +232,7 @@ const ChapterCard = ({ chapter, index }) => {
       >
         {/* Play Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-14 h-14 rounded-full bg-gold text-forest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+          <div className="w-14 h-14 rounded-full bg-gold text-on-gold flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
             <Play className="w-6 h-6 fill-current ml-1" />
           </div>
         </div>
@@ -274,7 +274,7 @@ const ChapterCard = ({ chapter, index }) => {
 
         {/* Watch Playlist CTA */}
         <div className="relative overflow-hidden rounded-2xl">
-          <div className="w-full py-3.5 px-6 bg-forest text-cream font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-forest transition-colors duration-300 shadow-md">
+          <div className="w-full py-3.5 px-6 bg-forest text-on-forest font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-on-gold transition-colors duration-300 shadow-md">
             <Play className="w-4 h-4 fill-current" />
             <span>Watch Playlist Lectures</span>
           </div>

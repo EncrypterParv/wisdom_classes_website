@@ -63,7 +63,7 @@ export const class12Playlists = [
     illustrationType: "diff_eq",
     symbol: "dy/dx",
     videoId: "09c3dDy0IK8",
-    playlistUrl: "https://www.youtube.com/watch?v=09c3dDy0IK8&list=PLkG0JIX8a6A45IiwwfXuz2ESsRGOFQoTW",
+    playlistUrl: "https://www.youtube.com/watch?v=09c3dDy0lK8&list=PLkG0JIX8a6A45liwwfXuz2ESsRGOFQoTW",
     thumbnail: null
   },
   {
@@ -89,7 +89,7 @@ export const class12Playlists = [
     illustrationType: "derivative",
     symbol: "d/dx",
     videoId: "-LInTs_KDx0",
-    playlistUrl: "https://www.youtube.com/watch?v=-LInTs_KDx0&list=PLkG0JIX8a6A4aycSfVu5vp3hNY94p_nGj",
+    playlistUrl: "https://www.youtube.com/watch?v=-LlnTs_KDx0&list=PLkG0JIX8a6A4aycSfVu5vp3hNY94p_nGj",
     thumbnail: null
   },
   {
@@ -128,7 +128,7 @@ export const class12Playlists = [
     illustrationType: "derivative",
     symbol: "d/dx",
     videoId: "pBizgy_IT2g",
-    playlistUrl: "https://www.youtube.com/watch?v=pBizgy_IT2g&list=PLkG0JIX8a6A4JMEYHcl6hdnxUcAy4Txoz",
+    playlistUrl: "https://www.youtube.com/watch?v=pBizgy_lT2g&list=PLkG0JIX8a6A4JMEYHcl6hdnxUcAy4Txoz",
     thumbnail: null
   },
   {

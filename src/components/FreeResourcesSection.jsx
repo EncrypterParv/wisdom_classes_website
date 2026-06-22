@@ -191,7 +191,7 @@ export default function FreeResourcesSection() {
                   {/* CTA Actions */}
                   <button
                     onClick={() => setSelectedResource(resource)}
-                    className="w-full mt-6 py-3 px-4 bg-forest hover:bg-gold text-cream hover:text-forest font-sans font-semibold text-xs rounded-xl shadow-md transition-colors duration-300 flex items-center justify-center gap-2"
+                    className="w-full mt-6 py-3 px-4 bg-forest hover:bg-gold text-on-forest hover:text-forest font-sans font-semibold text-xs rounded-xl shadow-md transition-colors duration-300 flex items-center justify-center gap-2"
                   >
                     <Eye className="w-4 h-4" />
                     <span>View & Download Sheet</span>
@@ -312,7 +312,7 @@ export default function FreeResourcesSection() {
                   </button>
                   <button
                     onClick={() => handleDownload(selectedResource)}
-                    className="px-6 py-2.5 bg-forest hover:bg-gold text-cream hover:text-forest text-xs font-bold font-sans rounded-xl shadow-md transition-colors duration-250 flex items-center gap-2"
+                    className="px-6 py-2.5 bg-forest hover:bg-gold text-on-forest hover:text-forest text-xs font-bold font-sans rounded-xl shadow-md transition-colors duration-250 flex items-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     <span>Download PDF / Image</span>

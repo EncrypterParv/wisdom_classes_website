@@ -25,7 +25,7 @@ function Counter({ value, suffix = "" }) {
     });
   }, [springValue, suffix]);
 
-  return <span ref={ref} className="font-serif text-5xl md:text-6xl font-bold text-forest" />;
+  return <span ref={ref} className="font-serif text-5xl md:text-6xl font-bold text-gold" />;
 }
 
 export default function StatisticsSection() {
@@ -65,7 +65,7 @@ export default function StatisticsSection() {
   ];
 
   return (
-    <section className="py-20 bg-cream-dark/40 relative overflow-hidden">
+    <section className="py-20 bg-cream-light/30 border-y border-gold/15 relative overflow-hidden">
       {/* Decorative math symbol overlay */}
       <div className="absolute inset-0 opacity-[0.03] select-none pointer-events-none font-mono text-xl flex flex-wrap gap-8 justify-around items-center p-8">
         <span>∫ f(x) dx = F(x) + C</span>
@@ -85,15 +85,15 @@ export default function StatisticsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-3xl border border-forest/5 shadow-[0_10px_35px_rgba(27,62,43,0.02)] text-center flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300"
+              className="bg-white p-8 rounded-3xl border border-gold/15 shadow-[0_10px_35px_rgba(13,17,23,0.05)] text-center flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="w-12 h-12 rounded-2xl bg-forest flex items-center justify-center mb-6 shadow-md shadow-forest/10 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
               <div className="flex items-baseline justify-center gap-0.5 mb-2">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
-              <h3 className="text-lg font-serif font-bold text-forest mb-2">
+              <h3 className="text-lg font-serif font-bold text-charcoal-light mb-2 group-hover:text-gold transition-colors duration-300">
                 {stat.name}
               </h3>
               <p className="text-charcoal/70 text-sm font-sans leading-relaxed">

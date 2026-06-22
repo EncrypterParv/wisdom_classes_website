@@ -1,27 +1,37 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen, GraduationCap, Phone, Info, Sun, Moon } from "lucide-react";
+import { Menu, X, BookOpen, GraduationCap, Phone, Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark" || 
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // Initialize theme from localStorage or system preference
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("wisdom-classes-theme");
+      if (savedTheme) return savedTheme;
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      return systemDark ? "dark" : "light";
+    }
+    return "light";
   });
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+    const root = window.document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+      root.classList.remove("dark");
     }
-  }, [darkMode]);
+    localStorage.setItem("wisdom-classes-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +61,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "py-2 bg-cream/85 backdrop-blur-md shadow-lg border-b border-forest/10"
+          ? "py-2 bg-cream/85 backdrop-blur-md shadow-md border-b border-gold/15"
           : "py-4 bg-transparent"
       }`}
     >
@@ -61,10 +71,10 @@ export default function Navbar() {
           <img 
             src="/wisdom-logo.jpg" 
             alt="Wisdom Classes Logo" 
-            className="h-[38px] sm:h-[44px] lg:h-[50px] w-auto object-contain rounded-full shadow-md transition-transform duration-300 group-hover:scale-105 shrink-0"
+            className="h-[38px] sm:h-[44px] lg:h-[50px] w-auto object-contain rounded-full border border-gold/20 shadow-md transition-transform duration-300 group-hover:scale-105 shrink-0"
           />
-          <div className="flex flex-col justify-center">
-            <h1 className="text-lg sm:text-xl lg:text-2xl font-serif font-black text-forest leading-none tracking-tight">
+          <div className="flex flex-col justify-center text-left">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold text-charcoal-light leading-none tracking-tight group-hover:text-gold transition-colors duration-300">
               Wisdom Classes
             </h1>
             <p className="text-[9px] uppercase font-sans font-bold tracking-[0.18em] text-gold mt-1 leading-none">
@@ -74,7 +84,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-white/50 backdrop-blur-sm p-1 rounded-full border border-forest/5 shadow-inner">
+        <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-cream-light/60 backdrop-blur-sm p-1 rounded-full border border-gold/15 shadow-inner">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
             return (
@@ -83,8 +93,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`relative px-2.5 xl:px-4 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-sans font-semibold transition-all duration-300 whitespace-nowrap ${
                   isActive
-                    ? "text-cream bg-forest shadow-sm"
-                    : "text-charcoal hover:text-forest hover:bg-forest/5"
+                    ? "text-on-gold bg-gold shadow-sm"
+                    : "text-charcoal hover:text-gold hover:bg-gold/5"
                 }`}
               >
                 {link.name}
@@ -95,33 +105,51 @@ export default function Navbar() {
 
         {/* Desktop CTA & Theme Toggle */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
+          {/* Theme Toggle Button */}
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full bg-forest/5 hover:bg-forest/10 text-forest hover:text-gold transition-colors duration-300"
+            onClick={toggleTheme}
+            className="p-2.5 rounded-full border border-gold/25 hover:border-gold bg-cream-light/60 hover:bg-cream-light text-gold transition-all duration-300 shadow-sm cursor-pointer inline-flex items-center justify-center shrink-0"
             aria-label="Toggle Theme"
           >
-            {darkMode ? <Sun className="w-5 h-5 text-gold" /> : <Moon className="w-5 h-5" />}
+            <motion.div
+              key={theme}
+              initial={{ rotate: -90, scale: 0.8, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              {theme === "dark" ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
+            </motion.div>
           </button>
+
           <Link
             to="/contact"
-            className="px-5 py-2 bg-forest hover:bg-forest-light text-cream rounded-full font-sans font-semibold text-xs xl:text-sm transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center gap-1.5 hover:-translate-y-0.5"
+            className="px-6 py-2.5 bg-gold hover:bg-gold-light text-on-gold rounded-full font-sans font-bold text-xs xl:text-sm transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center gap-1.5 hover:-translate-y-0.5"
           >
             Enquire Now
           </Link>
         </div>
 
-        {/* Mobile Actions */}
+        {/* Mobile Actions Menu */}
         <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile Theme Toggle Button */}
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-xl text-forest hover:bg-forest/5 transition-colors duration-300"
+            onClick={toggleTheme}
+            className="p-2 rounded-xl border border-gold/20 text-gold hover:bg-gold/5 transition-colors duration-300 cursor-pointer inline-flex items-center justify-center w-10 h-10 shrink-0"
             aria-label="Toggle Theme"
           >
-            {darkMode ? <Sun className="w-5.5 h-5.5 text-gold" /> : <Moon className="w-5.5 h-5.5" />}
+            <motion.div
+              key={theme}
+              initial={{ rotate: -90, scale: 0.8, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </motion.div>
           </button>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-xl text-forest hover:bg-forest/5 transition-colors duration-300"
+            className="p-2 rounded-xl text-gold hover:bg-gold/5 transition-colors duration-300 cursor-pointer"
             aria-label="Toggle navigation"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -137,7 +165,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden w-full bg-cream border-b border-forest/10 shadow-xl overflow-hidden"
+            className="lg:hidden w-full bg-cream-light border-b border-gold/15 shadow-xl overflow-hidden"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link, idx) => {
@@ -153,8 +181,8 @@ export default function Navbar() {
                       to={link.path}
                       className={`flex items-center gap-3 px-4 py-3 rounded-xl font-sans font-medium text-base transition-all duration-300 ${
                         isActive
-                          ? "bg-forest text-cream shadow-md"
-                          : "text-charcoal hover:bg-forest/5 hover:text-forest"
+                          ? "bg-gold text-on-gold shadow-md"
+                          : "text-charcoal hover:bg-gold/5 hover:text-gold"
                       }`}
                     >
                       {link.icon}
@@ -167,13 +195,13 @@ export default function Navbar() {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: navLinks.length * 0.05 }}
-                className="pt-2 border-t border-forest/10"
+                className="pt-2 border-t border-gold/15"
               >
                 <Link
                   to="/contact"
-                  className="w-full justify-center px-6 py-3 bg-forest text-cream rounded-xl font-sans font-medium text-center shadow-md transition-all duration-300 inline-flex items-center gap-2"
+                  className="w-full justify-center px-6 py-3 bg-gold text-on-gold rounded-xl font-sans font-bold text-center shadow-md transition-all duration-300 inline-flex items-center gap-2"
                 >
-                  <Phone className="w-4 h-4" /> Enquire Now
+                  Enquire Now
                 </Link>
               </motion.div>
             </div>

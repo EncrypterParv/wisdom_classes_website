@@ -136,7 +136,7 @@ function PlaylistCard({ chapter, itemVariants }) {
               e.stopPropagation();
               window.open(chapter.playlistUrl, "_blank", "noopener,noreferrer");
             }}
-            className="w-full py-3.5 px-6 bg-forest text-cream font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-forest transition-colors duration-300 shadow-md rounded-xl cursor-pointer"
+            className="w-full py-3.5 px-6 bg-forest text-on-forest font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-forest transition-colors duration-300 shadow-md rounded-xl cursor-pointer"
           >
             <Play className="w-4 h-4 fill-current" />
             <span>Watch Playlist</span>

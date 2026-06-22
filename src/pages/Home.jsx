@@ -183,7 +183,7 @@ export default function Home() {
             >
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-forest hover:bg-forest-light text-cream rounded-2xl font-sans font-bold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5"
+                className="px-8 py-4 bg-forest hover:bg-forest-light text-on-forest rounded-2xl font-sans font-bold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5"
               >
                 <span>Book a Free Demo Class</span>
                 <ArrowRight className="w-4.5 h-4.5 text-gold" />
@@ -340,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* 2. ABOUT SOMESH SIR SECTION */}
-      <section id="about" className="py-24 bg-white relative">
+      <section id="about" className="py-24 bg-cream-light relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <motion.div
@@ -396,9 +396,9 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
-            <div className="bg-cream-light p-8 rounded-3xl border border-forest/5 shadow-inner text-left flex flex-col gap-4">
+            <div className="bg-white p-8 rounded-3xl border border-forest/5 shadow-inner text-left flex flex-col gap-4">
               <div className="w-10 h-10 rounded-xl bg-forest flex items-center justify-center text-gold">
                 <Award className="w-5 h-5" />
               </div>
@@ -408,7 +408,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-cream-light p-8 rounded-3xl border border-forest/5 shadow-inner text-left flex flex-col gap-4">
+            <div className="bg-white p-8 rounded-3xl border border-forest/5 shadow-inner text-left flex flex-col gap-4">
               <div className="w-10 h-10 rounded-xl bg-forest flex items-center justify-center text-gold">
                 <Target className="w-5 h-5" />
               </div>
@@ -426,7 +426,7 @@ export default function Home() {
       <StatisticsSection />
 
       {/* 4. COURSE CATEGORIES */}
-      <section id="courses" className="py-24 bg-white">
+      <section id="courses" className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16 text-center">
           <span className="px-3.5 py-1 text-xs font-sans font-semibold uppercase tracking-wider text-forest bg-forest/5 rounded-full border border-forest/10">
             Our Offerings
@@ -503,7 +503,7 @@ export default function Home() {
       <FreeResourcesSection />
 
       {/* 7. CONTACT ACTION / CTA INQUIRY FORM PREVIEW */}
-      <section className="py-24 bg-white relative">
+      <section className="py-24 bg-cream relative">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 bg-forest text-cream rounded-3xl p-12 lg:p-16 border border-gold/20 shadow-2xl relative overflow-hidden text-center flex flex-col items-center gap-6">
           {/* Decorative rings */}
           <div className="absolute -top-16 -right-16 w-40 h-40 border-4 border-gold/10 rounded-full pointer-events-none" />
@@ -517,7 +517,7 @@ export default function Home() {
           </p>
           <Link
             to="/contact"
-            className="px-8 py-4 bg-gold hover:bg-gold-light text-forest font-sans font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5 mt-4"
+            className="px-8 py-4 bg-gold hover:bg-gold-light text-on-gold font-sans font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5 mt-4"
           >
             Get in Touch Instantly
           </Link>

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Heart } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-forest text-cream pt-16 pb-8 border-t-2 border-gold/30 text-left">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-cream-light text-charcoal pt-16 pb-8 border-t border-gold/15 text-left">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         
         {/* Branding Column */}
         <div className="flex flex-col gap-4">
@@ -14,18 +14,18 @@ export default function Footer() {
             <img 
               src="/wisdom-logo.jpg" 
               alt="Wisdom Classes Logo" 
-              className="h-[52px] w-auto object-contain rounded-full shadow-md transition-transform duration-300 hover:scale-105"
+              className="h-[52px] w-auto object-contain rounded-full border border-gold/20 shadow-md transition-transform duration-300 hover:scale-105"
             />
             <div>
-              <h3 className="text-xl font-serif font-bold tracking-tight text-cream">
+              <h3 className="text-xl font-serif font-bold tracking-tight text-charcoal-light">
                 Wisdom Classes
               </h3>
-              <p className="text-[10px] uppercase font-sans font-semibold tracking-[0.2em] text-gold/80">
+              <p className="text-[10px] uppercase font-sans font-semibold tracking-[0.2em] text-gold">
                 By Somesh Jain
               </p>
             </div>
           </div>
-          <p className="text-cream/75 text-sm leading-relaxed mt-2 font-sans">
+          <p className="text-charcoal/75 text-sm leading-relaxed mt-2 font-sans">
             Providing premium mathematical guidance for Class 11, Class 12, JEE, NDA, and IPMAT aspirants. Empowering students to visualize math, think logically, and achieve top ranks.
           </p>
           <div className="flex gap-4 mt-2">
@@ -33,7 +33,7 @@ export default function Footer() {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center text-cream hover:bg-gold hover:text-forest transition-colors duration-300"
+              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-charcoal hover:bg-gold hover:text-cream transition-colors duration-300"
               aria-label="YouTube Channel"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Footer() {
           <h4 className="font-serif text-lg font-semibold text-gold mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-gold">
             Quick Links
           </h4>
-          <ul className="flex flex-col gap-3.5 text-sm text-cream/85">
+          <ul className="flex flex-col gap-3.5 text-sm text-charcoal/85">
             <li>
               <Link to="/" className="hover:text-gold transition-colors duration-300">Home</Link>
             </li>
@@ -72,7 +72,7 @@ export default function Footer() {
           <h4 className="font-serif text-lg font-semibold text-gold mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-gold">
             Our Courses
           </h4>
-          <ul className="flex flex-col gap-3.5 text-sm text-cream/85">
+          <ul className="flex flex-col gap-3.5 text-sm text-charcoal/85">
             <li>
               <Link to="/class-11" className="hover:text-gold transition-colors duration-300">Class 11 Mathematics</Link>
             </li>
@@ -96,7 +96,7 @@ export default function Footer() {
           <h4 className="font-serif text-lg font-semibold text-gold mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-gold">
             Get In Touch
           </h4>
-          <ul className="flex flex-col gap-4 text-sm text-cream/85">
+          <ul className="flex flex-col gap-4 text-sm text-charcoal/85">
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
               <span>Gate No. 3, Garden House Colony, 165/C, Near MPGS, Sector 6, Shastri Nagar, Meerut, Uttar Pradesh 250002</span>
@@ -115,9 +115,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom copyrights section */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-16 pt-8 border-t border-cream/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/60">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-16 pt-8 border-t border-gold/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal/60">
         <p>&copy; {currentYear} Wisdom Classes by Somesh Jain. All rights reserved.</p>
-        <p className="flex items-center gap-1.5">
+        <p className="flex items-center gap-1.5 justify-center">
           Designed with <Heart className="w-3.5 h-3.5 text-gold fill-gold" /> for Academic Excellence.
         </p>
       </div>

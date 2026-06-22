@@ -197,7 +197,7 @@ const ChapterCard = ({ chapter, index }) => {
       >
         {/* Play Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-14 h-14 rounded-full bg-gold text-forest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+          <div className="w-14 h-14 rounded-full bg-gold text-on-gold flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
             <Play className="w-6 h-6 fill-current ml-1" />
           </div>
         </div>
@@ -242,7 +242,7 @@ const ChapterCard = ({ chapter, index }) => {
 
         {/* Watch Playlist CTA */}
         <div className="relative overflow-hidden rounded-2xl">
-          <div className="w-full py-3.5 px-6 bg-forest text-cream font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-forest transition-colors duration-300 shadow-md">
+          <div className="w-full py-3.5 px-6 bg-forest text-on-forest font-sans font-semibold text-sm text-center flex items-center justify-center gap-2 group-hover:bg-gold group-hover:text-on-gold transition-colors duration-300 shadow-md">
             <Play className="w-4 h-4 fill-current" />
             <span>Watch Playlist Lectures</span>
           </div>
@@ -334,16 +334,16 @@ export default function NDA() {
 
         {/* Segmented Course Switcher */}
         <div className="flex justify-center mb-10">
-          <div className="bg-cream-light p-1.5 rounded-full border border-forest/10 flex shadow-inner">
+          <div className="bg-cream-light p-1.5 rounded-2xl sm:rounded-full border border-forest/10 flex flex-col sm:flex-row shadow-inner w-full sm:w-auto">
             <button
               onClick={() => {
                 setActiveTab("2025");
                 setSelectedCategory("All");
                 setSearchQuery("");
               }}
-              className={`px-6 py-3 rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer ${
+              className={`px-4 sm:px-6 py-3 rounded-xl sm:rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer text-center ${
                 activeTab === "2025" 
-                  ? "bg-forest text-cream shadow-md" 
+                  ? "bg-forest text-on-forest shadow-md" 
                   : "text-forest/70 hover:text-forest"
               }`}
             >
@@ -355,9 +355,9 @@ export default function NDA() {
                 setSelectedCategory("All");
                 setSearchQuery("");
               }}
-              className={`px-6 py-3 rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer ${
+              className={`px-4 sm:px-6 py-3 rounded-xl sm:rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer text-center ${
                 activeTab === "2026" 
-                  ? "bg-forest text-cream shadow-md" 
+                  ? "bg-forest text-on-forest shadow-md" 
                   : "text-forest/70 hover:text-forest"
               }`}
             >
@@ -391,7 +391,7 @@ export default function NDA() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer ${
                     selectedCategory === cat
-                      ? "bg-gold border-gold text-forest shadow-sm"
+                      ? "bg-gold border-gold text-on-gold shadow-sm"
                       : "bg-white border-forest/10 text-forest/70 hover:border-forest/30"
                   }`}
                 >
