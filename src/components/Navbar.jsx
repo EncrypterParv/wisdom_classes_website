@@ -1,12 +1,27 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen, GraduationCap, Phone, Info } from "lucide-react";
+import { Menu, X, BookOpen, GraduationCap, Phone, Info, Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark" || 
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +40,10 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "Class 11", path: "/class-11", icon: <BookOpen className="w-4 h-4" /> },
     { name: "Class 12", path: "/class-12", icon: <BookOpen className="w-4 h-4" /> },
-    { name: "JEE Math", path: "/jee", icon: <GraduationCap className="w-4 h-4" /> },
-    { name: "NDA Math", path: "/nda", icon: <GraduationCap className="w-4 h-4" /> },
-    { name: "IPMAT Math", path: "/ipmat", icon: <GraduationCap className="w-4 h-4" /> },
+    { name: "JEE", path: "/jee", icon: <GraduationCap className="w-4 h-4" /> },
+    { name: "NDA", path: "/nda", icon: <GraduationCap className="w-4 h-4" /> },
+    { name: "IPMAT", path: "/ipmat", icon: <GraduationCap className="w-4 h-4" /> },
+    { name: "Resources", path: "/free-resources", icon: <BookOpen className="w-4 h-4" /> },
     { name: "Contact", path: "/contact", icon: <Phone className="w-4 h-4" /> },
   ];
 
@@ -35,37 +51,39 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "py-3 bg-cream/85 backdrop-blur-md shadow-lg border-b border-forest/10"
-          : "py-5 bg-transparent"
+          ? "py-2 bg-cream/85 backdrop-blur-md shadow-lg border-b border-forest/10"
+          : "py-4 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 xl:px-8 flex items-center justify-between gap-3">
         {/* Logo Section */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-forest flex items-center justify-center text-gold shadow-md group-hover:scale-105 transition-transform duration-300">
-            <span className="font-serif font-bold text-xl">W</span>
-          </div>
-          <div>
-            <h1 className="text-xl md:text-2xl font-serif font-bold text-forest leading-none tracking-tight">
+        <Link to="/" className="flex items-center gap-3 shrink-0 group">
+          <img 
+            src="/wisdom-logo.jpg" 
+            alt="Wisdom Classes Logo" 
+            className="h-[38px] sm:h-[44px] lg:h-[50px] w-auto object-contain rounded-full shadow-md transition-transform duration-300 group-hover:scale-105 shrink-0"
+          />
+          <div className="flex flex-col justify-center">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-serif font-black text-forest leading-none tracking-tight">
               Wisdom Classes
             </h1>
-            <p className="text-[10px] uppercase font-sans font-semibold tracking-[0.2em] text-gold mt-1">
+            <p className="text-[9px] uppercase font-sans font-bold tracking-[0.18em] text-gold mt-1 leading-none">
               By Somesh Jain
             </p>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1 bg-white/50 backdrop-blur-sm p-1.5 rounded-full border border-forest/5 shadow-inner">
+        <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-white/50 backdrop-blur-sm p-1 rounded-full border border-forest/5 shadow-inner">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
             return (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 rounded-full text-sm font-sans font-medium transition-all duration-300 ${
+                className={`relative px-2.5 xl:px-4 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-sans font-semibold transition-all duration-300 whitespace-nowrap ${
                   isActive
-                    ? "text-cream bg-forest"
+                    ? "text-cream bg-forest shadow-sm"
                     : "text-charcoal hover:text-forest hover:bg-forest/5"
                 }`}
               >
@@ -75,24 +93,40 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
+        {/* Desktop CTA & Theme Toggle */}
+        <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-full bg-forest/5 hover:bg-forest/10 text-forest hover:text-gold transition-colors duration-300"
+            aria-label="Toggle Theme"
+          >
+            {darkMode ? <Sun className="w-5 h-5 text-gold" /> : <Moon className="w-5 h-5" />}
+          </button>
           <Link
             to="/contact"
-            className="px-6 py-2.5 bg-forest hover:bg-forest-light text-cream rounded-full font-sans font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center gap-2 hover:-translate-y-0.5"
+            className="px-5 py-2 bg-forest hover:bg-forest-light text-cream rounded-full font-sans font-semibold text-xs xl:text-sm transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center gap-1.5 hover:-translate-y-0.5"
           >
             Enquire Now
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 rounded-xl text-forest hover:bg-forest/5 transition-colors duration-300"
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex lg:hidden items-center gap-2">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-xl text-forest hover:bg-forest/5 transition-colors duration-300"
+            aria-label="Toggle Theme"
+          >
+            {darkMode ? <Sun className="w-5.5 h-5.5 text-gold" /> : <Moon className="w-5.5 h-5.5" />}
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-xl text-forest hover:bg-forest/5 transition-colors duration-300"
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}

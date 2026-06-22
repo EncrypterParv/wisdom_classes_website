@@ -11,6 +11,7 @@ import JEE from "./pages/JEE";
 import NDA from "./pages/NDA";
 import IPMAT from "./pages/IPMAT";
 import Contact from "./pages/Contact";
+import FreeResources from "./pages/FreeResources";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/jee" element={<JEE />} />
             <Route path="/nda" element={<NDA />} />
             <Route path="/ipmat" element={<IPMAT />} />
+            <Route path="/free-resources" element={<FreeResources />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

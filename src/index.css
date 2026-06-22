@@ -32,13 +32,34 @@
 
 @layer base {
   body {
-    @apply bg-cream text-charcoal font-sans antialiased overflow-x-hidden;
-    background-color: #FAF6EE;
+    @apply bg-cream text-charcoal font-sans antialiased overflow-x-hidden transition-colors duration-300;
+    background-color: var(--color-cream);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+}
+
+/* Dark theme color overrides */
+.dark {
+  --color-cream-light: #161f30;
+  --color-cream: #0b0f19;
+  --color-cream-dark: #070a10;
+  
+  --color-white: #111a2e;
+  
+  --color-forest-light: #60a5fa;
+  --color-forest: #3b82f6;
+  --color-forest-dark: #1d4ed8;
+  
+  --color-gold-light: #fde047;
+  --color-gold: #e5c158;
+  --color-gold-dark: #ca8a04;
+  
+  --color-charcoal-light: #94a3b8;
+  --color-charcoal: #cbd5e1;
+  --color-charcoal-dark: #f8fafc;
 }
 
 /* Custom Scrollbar */
@@ -47,16 +68,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF6EE;
+  background: var(--color-cream);
+  transition: background-color 300ms;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b3e2b;
+  background: var(--color-forest);
   border-radius: 4px;
+  transition: background-color 300ms;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a5a3f;
+  background: var(--color-forest-light);
 }
 
 /* Glassmorphism Styles */
@@ -65,6 +88,12 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: background-color 300ms, border-color 300ms;
+}
+
+.dark .glass {
+  background: rgba(14, 16, 23, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-dark {
@@ -72,4 +101,10 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 300ms, border-color 300ms;
+}
+
+.dark .glass-dark {
+  background: rgba(0, 82, 204, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }

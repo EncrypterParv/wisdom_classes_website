@@ -11,9 +11,11 @@ export default function Footer() {
         {/* Branding Column */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gold flex items-center justify-center text-forest shadow-md">
-              <span className="font-serif font-bold text-xl">W</span>
-            </div>
+            <img 
+              src="/wisdom-logo.jpg" 
+              alt="Wisdom Classes Logo" 
+              className="h-[52px] w-auto object-contain rounded-full shadow-md transition-transform duration-300 hover:scale-105"
+            />
             <div>
               <h3 className="text-xl font-serif font-bold tracking-tight text-cream">
                 Wisdom Classes
@@ -49,6 +51,9 @@ export default function Footer() {
           <ul className="flex flex-col gap-3.5 text-sm text-cream/85">
             <li>
               <Link to="/" className="hover:text-gold transition-colors duration-300">Home</Link>
+            </li>
+            <li>
+              <Link to="/free-resources" className="hover:text-gold transition-colors duration-300">Free Resources</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:text-gold transition-colors duration-300">Contact & Inquiries</Link>

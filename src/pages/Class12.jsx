@@ -2,6 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Video, ArrowLeft, Search, Play, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { class12Playlists } from "../data/class12Playlists";
+import { MathThumbnail } from "../utils/getThumbnail";
+
 
 // Mathematical Custom SVG Illustrations for each Class 12 topic
 const MathIllustration = ({ topic, className = "w-12 h-12" }) => {
@@ -175,18 +178,6 @@ const MathIllustration = ({ topic, className = "w-12 h-12" }) => {
 
 // Math Card Component with YouTube dynamic thumbnail loading and fallback to topic-relevant Unsplash backgrounds
 const ChapterCard = ({ chapter, index }) => {
-  const [imgSrc, setImgSrc] = useState(`https://img.youtube.com/vi/${chapter.videoId}/hqdefault.jpg`);
-  const [isFallback, setIsFallback] = useState(false);
-  const [imgLoaded, setImgLoaded] = useState(false);
-
-  // Trigger fallback when YouTube image fails to load
-  const handleImageError = () => {
-    if (!isFallback) {
-      setImgSrc(chapter.fallbackThumbnail);
-      setIsFallback(true);
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -200,48 +191,20 @@ const ChapterCard = ({ chapter, index }) => {
       onClick={() => window.open(chapter.playlistUrl, "_blank", "noopener,noreferrer")}
       className="bg-white rounded-3xl overflow-hidden border border-forest/5 shadow-[0_10px_30px_rgba(27,62,43,0.02)] flex flex-col group cursor-pointer hover:border-gold/40 hover:shadow-[0_0_25px_rgba(212,175,55,0.18)] transition-all duration-500 relative select-none"
     >
-      {/* Thumbnail Area */}
-      <div className="relative h-48 overflow-hidden bg-forest/5 shrink-0">
-        <img
-          src={imgSrc}
-          alt={chapter.name}
-          className={`w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out ${
-            imgLoaded ? "opacity-100" : "opacity-30"
-          }`}
-          onLoad={() => setImgLoaded(true)}
-          onError={handleImageError}
-          loading="lazy"
-        />
-
-        {/* Fallback pattern overlay shown on top of the fallback image for aesthetic depth */}
-        {isFallback && (
-          <div className="absolute inset-0 bg-forest/10 opacity-20 pointer-events-none mix-blend-overlay">
-            {/* Background formula patterns */}
-            <div className="absolute inset-0 font-serif text-[10px] flex flex-wrap gap-4 p-2 overflow-hidden leading-tight">
-              <div>f(x) = dx/dy</div>
-              <div>lim x→∞</div>
-              <div>a² + b² = c²</div>
-              <div>∑ x_i</div>
-            </div>
-          </div>
-        )}
-
-        {/* Absolute dark/gradient overlay when hovering */}
-        <div className="absolute inset-0 bg-gradient-to-t from-forest/60 via-forest/10 to-transparent opacity-45 group-hover:opacity-65 transition-opacity duration-300" />
-        
+      {/* Thumbnail */}
+      <MathThumbnail 
+        videoIdOrUrl={chapter.videoId} 
+        topicKey={chapter.id} 
+        alt={chapter.name} 
+        manualThumbnail={chapter.thumbnail}
+      >
         {/* Play Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-14 h-14 rounded-full bg-gold text-forest flex items-center justify-center shadow-lg transform scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 hover:bg-cream hover:text-gold">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="w-14 h-14 rounded-full bg-gold text-forest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
             <Play className="w-6 h-6 fill-current ml-1" />
           </div>
         </div>
-
-        {/* Topic Symbol Badge inside the thumbnail corner */}
-        <div className="absolute bottom-4 left-4 bg-cream/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif font-bold text-forest border border-gold/30 flex items-center gap-1.5 shadow-md">
-          <span className="text-gold font-sans">∫</span>
-          <span>{chapter.symbol}</span>
-        </div>
-      </div>
+      </MathThumbnail>
 
       {/* Card Content */}
       <div className="p-6 md:p-8 flex flex-col flex-grow justify-between text-left relative">
@@ -292,140 +255,7 @@ const ChapterCard = ({ chapter, index }) => {
 export default function Class12() {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const chaptersData = [
-    {
-      id: "probability",
-      name: "Probability",
-      shortDescription: "Conditional probability, Bayes' theorem & random variables",
-      details: "Learn conditional probability, multiplication theorem on probability, independent events, Bayes' theorem, random variables and probability distributions.",
-      illustrationType: "probability",
-      symbol: "P(A|B)",
-      videoId: "NKBI57ptWBI",
-      playlistUrl: "https://www.youtube.com/watch?v=NKBI57ptWBI&list=PLkG0JIX8a6A50BYYfkPfnrhXmkO8wUpGe",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1453733190148-c44698c26588?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "geometry3d",
-      name: "3D Geometry",
-      shortDescription: "Direction cosines, lines & planes in space",
-      details: "Master direction cosines and direction ratios of a line, equation of a line in space, shortest distance between lines, and equations of planes.",
-      illustrationType: "geometry3d",
-      symbol: "cos(α)",
-      videoId: "OmUWNMmWIT0",
-      playlistUrl: "https://www.youtube.com/watch?v=OmUWNMmWIT0&list=PLkG0JIX8a6A48CinaAT4_4TNCkvCDxmKp",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "vector",
-      name: "Vector Algebra",
-      shortDescription: "Vectors, dot product, cross product & projections",
-      details: "Understand vectors and scalars, components of a vector, addition, scalar multiplication, scalar product (dot product), and vector product (cross product) of vectors.",
-      illustrationType: "vector",
-      symbol: "a · b",
-      videoId: "5XF_YcAEbAI",
-      playlistUrl: "https://www.youtube.com/watch?v=5XF_YcAEbAI&list=PLkG0JIX8a6A7ENjgYFvf7VpLzpIDz9uvI",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "relations",
-      name: "Relations and Functions",
-      shortDescription: "Types of relations, one-one & onto functions",
-      details: "Learn types of relations: reflexive, symmetric, transitive, and equivalence relations. Master one-to-one, onto, and composite functions.",
-      illustrationType: "relations",
-      symbol: "f: A→B",
-      videoId: "AJXNObjS3B0",
-      playlistUrl: "https://www.youtube.com/watch?v=AJXNObjS3B0&list=PLkG0JIX8a6A4yJ-6yrRECgc4rn-TM2AtB",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "diff-equations",
-      name: "Differential Equations",
-      shortDescription: "Order, degree, general solutions & applications",
-      details: "Understand order and degree, general and particular solutions, homogeneous and linear differential equations, and variable separable method.",
-      illustrationType: "diff_eq",
-      symbol: "dy/dx + Py",
-      videoId: "09c3dDy0IK8",
-      playlistUrl: "https://www.youtube.com/watch?v=09c3dDy0IK8&list=PLkG0JIX8a6A45liwwfXuz2ESsRGOFQoTW",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "matrices",
-      name: "Matrices and Determinants",
-      shortDescription: "Matrix algebra, determinants, adjoint & inverse",
-      details: "Master matrix operations, transpose, determinants, properties of determinants, adjoint and inverse of a matrix, and solving systems of linear equations.",
-      illustrationType: "matrix",
-      symbol: "[A] · [B]",
-      videoId: "rUYLSTJGcc",
-      playlistUrl: "https://www.youtube.com/watch?v=rUYLSTJGcc&list=PLkG0JIX8a6A47HbWRUXcw-W6ruAP6X-Zo",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "continuity",
-      name: "Continuity and Differentiability",
-      shortDescription: "Limits, continuity, differentiability & chain rule",
-      details: "Learn continuity of real-valued functions, differentiability of exponential, logarithmic, and parametric functions, and Mean Value Theorems.",
-      illustrationType: "derivative",
-      symbol: "f'(x)",
-      videoId: "-LInTs_KDx0",
-      playlistUrl: "https://www.youtube.com/watch?v=-LInTs_KDx0&list=PLkG0JIX8a6A4aycSfVu5vp3hNY94p_nGj",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "inverse-trig",
-      name: "Inverse Trigonometric Functions",
-      shortDescription: "Principal value branches & inverse properties",
-      details: "Explore definitions, range, domain, principal value branches, and algebraic properties of inverse trigonometric functions.",
-      illustrationType: "trig",
-      symbol: "sin⁻¹(x)",
-      videoId: "JNDCfGVH1iU",
-      playlistUrl: "https://www.youtube.com/watch?v=JNDCfGVH1iU&list=PLkG0JIX8a6A4fZAb3r3u1HF0veq4Ad_Bp",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "integration",
-      name: "Integration",
-      shortDescription: "Definite & indefinite integrals & methods",
-      details: "Master integration as inverse process of differentiation, substitution, integration by parts, partial fractions, and definite integral properties.",
-      illustrationType: "integration",
-      symbol: "∫ f(x)dx",
-      videoId: "2EGWNGtXwug",
-      playlistUrl: "https://www.youtube.com/watch?v=2EGWNGtXwug&list=PLkG0JIX8a6A6DeWIwaJK9B3aBq36uAEd6",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "differentiation-core",
-      name: "Differentiation (Core)",
-      shortDescription: "Standard formulas, implicit & higher-order derivatives",
-      details: "Master differentiation rules, derivatives of composite functions, implicit differentiation, logarithmic differentiation, and second-order derivatives.",
-      illustrationType: "derivative",
-      symbol: "d/dx",
-      videoId: "pBizgy_IT2g",
-      playlistUrl: "https://www.youtube.com/watch?v=pBizgy_IT2g&list=PLkG0JIX8a6A4JMEYHcl6hdnxUcAy4TxoZ",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "differentiation-applied",
-      name: "Differentiation (Applied)",
-      shortDescription: "Tangents, normals, approximations & maxima/minima",
-      details: "Apply differentiation to rates of change, increasing & decreasing functions, tangents and normals, approximations, and maxima & minima.",
-      illustrationType: "derivative",
-      symbol: "Δy/Δx",
-      videoId: "DSigzKc_vx8",
-      playlistUrl: "https://www.youtube.com/watch?v=DSigzKc_vx8&list=PLkG0JIX8a6A7rs58I71G2I5z0agdPA8Qd",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      id: "linear-programming",
-      name: "Linear Programming",
-      shortDescription: "Optimization, constraints & feasible region",
-      details: "Master linear programming problems, graphical method of solution, feasible and infeasible regions, and optimal feasible solutions under constraints.",
-      illustrationType: "lpp",
-      symbol: "Max Z = ax+by",
-      videoId: "5nKm0xECZPY",
-      playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
-      fallbackThumbnail: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop"
-    }
-  ];
+  const chaptersData = class12Playlists;
 
   // Filtering chapters based on search query
   const filteredChapters = chaptersData.filter((chapter) =>
