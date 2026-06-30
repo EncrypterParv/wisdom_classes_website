@@ -9,8 +9,8 @@ export const jeeChapters = [
     details: "Master integration methodologies, substitution, integration by parts, partial fractions, properties of definite integrals, and area under curves.",
     illustrationType: "integration",
     videoId: "2EGWNGtXwug",
-    playlistUrl: "https://www.youtube.com/watch?v=2EGWNGtXwug&list=PLkG0JIX8a6A6DeWIwaJK9B3aBq36uAEd6",
-    thumbnail: "https://i.ytimg.com/vi/2EGWNGtXwug/hqdefault.jpg"
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6TJbUHuHh_I6ymAw6gRxI2&si=_BmzPoOgZkk3g8iR",
+    thumbnail: "https://i.ytimg.com/vi/3C6c_RdJaNc/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLD0087UbRubDj-P9d-N5f_Wgy6i3g"
   },
   {
     id: "jee-quadratic",
@@ -20,7 +20,7 @@ export const jeeChapters = [
     details: "Learn nature of roots, relations between roots and coefficients, common roots, location of roots, and quadratic equations with complex coefficients.",
     illustrationType: "quadratic",
     videoId: "dSc2772LBDs",
-    playlistUrl: "https://www.youtube.com/watch?v=dSc2772LBDs&list=PLkG0JIX8a6A6-xjtuigEQ5stvVCR2GTY1",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6-xjtuigEQ5stvVCR2GTY1&si=FrRwyy6HW3P1Iax0",
     thumbnail: "https://i.ytimg.com/vi/dSc2772LBDs/hqdefault.jpg"
   },
   {
@@ -30,9 +30,9 @@ export const jeeChapters = [
     shortDescription: "Standard parabola equations, tangents, normals & locus",
     details: "Deep dive into standard parabolas, equations of tangents and normals, focal chords, parametric forms, and advanced locus equations.",
     illustrationType: "conic",
-    videoId: "5nKm0xECZPY",
-    playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
-    thumbnail: "https://i.ytimg.com/vi/5nKm0xECZPY/hqdefault.jpg"
+    videoId: "NctedujHXjg",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A7oxFZ8jK5g6kl0yRIRhJN9&si=c-2yH-Lc22BlDi1-",
+    thumbnail: "https://i.ytimg.com/vi/NctedujHXjg/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBJOt718BmoJNUDsleRWXuEef0uYw"
   },
   {
     id: "jee-ellipse",
@@ -42,8 +42,8 @@ export const jeeChapters = [
     details: "Understand equations of ellipses, eccentricity, directrices, auxiliary circles, tangent & normal equations, and geometric properties.",
     illustrationType: "conic",
     videoId: "5nKm0xECZPY",
-    playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
-    thumbnail: "https://i.ytimg.com/vi/5nKm0xECZPY/hqdefault.jpg"
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A408Ev1XCLDSsfy8dii_Tq5&si=aJsZE-yVhhfr43K0",
+    thumbnail: "https://i.ytimg.com/vi/Q0ZkFTh-to4/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCWpDQ4RjKGgXDMAQ1KOSHe9hSQgA"
   },
   {
     id: "jee-logarithm",
@@ -53,8 +53,8 @@ export const jeeChapters = [
     details: "Learn laws of logarithms, base change theorem, solving logarithmic equations and inequalities, and graphs of logarithmic functions.",
     illustrationType: "logarithm",
     videoId: "LuH7gJ3c52o",
-    playlistUrl: "https://www.youtube.com/playlist?list=PLkG0JIX8a6AdQGGmdfm5E7CSPbQfxcUC",
-    thumbnail: "https://i.ytimg.com/vi/LuH7gJ3c52o/hqdefault.jpg"
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A60u79Zl_1k1qgUL2-q7yxv&si=fNkTjyfJ7aHgJxpJ",
+    thumbnail: "https://i.ytimg.com/vi/t0uLNZPe_f0/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDNneVE-2jrN0KxMsGGjVgOkxTKug"
   },
   {
     id: "jee-pair-of-lines",
@@ -64,7 +64,7 @@ export const jeeChapters = [
     details: "Master joint equations of straight lines, angle between a pair of lines, bisectors of angles, and general second-degree equations.",
     illustrationType: "lines",
     videoId: "NmtXoAhJ_gY",
-    playlistUrl: "https://www.youtube.com/watch?v=NmtXoAhJ_gY",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A56DpiG_f0xMucr4xOXE5fe&si=qzAC7j8H0OAOxaqT",
     thumbnail: "https://i.ytimg.com/vi/NmtXoAhJ_gY/hqdefault.jpg"
   },
   {
@@ -75,7 +75,7 @@ export const jeeChapters = [
     details: "Master coordinates curves, graphing functions, transformations like f(|x|), |f(x)|, plotting inequalities, and solving equations graphically.",
     illustrationType: "graphs",
     videoId: "6kqhcY_PNGQ",
-    playlistUrl: "https://www.youtube.com/watch?v=6kqhcY_PNGQ",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A4v5wb2p2KA3ozEOdilavlO&si=R9IVuweCoWPWuN97",
     thumbnail: "https://i.ytimg.com/vi/6kqhcY_PNGQ/hqdefault.jpg"
   }
 ];
@@ -89,8 +89,19 @@ export const jeePyqs = [
     details: "Crack highly challenging integration questions asked in JEE Main & Advanced over the last 10 years with short tricks.",
     illustrationType: "integration",
     videoId: "2EGWNGtXwug",
-    playlistUrl: "https://www.youtube.com/watch?v=2EGWNGtXwug&list=PLkG0JIX8a6A6DeWIwaJK9B3aBq36uAEd6",
-    thumbnail: "https://i.ytimg.com/vi/2EGWNGtXwug/hqdefault.jpg"
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A40rSN4WmZdYDemydVQ3xfq&si=vx736lZG39Jn7psP",
+    thumbnail: "https://i.ytimg.com/vi/v8HHcXE4DkY/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4AfwIgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLDX5qi_U8IQ-pqhzkm7WHlLjwUN_w"
+  },
+  {
+    id: "pyq-differential-equations",
+    name: "Differential Equations PYQs",
+    category: "Calculus PYQs",
+    shortDescription: "JEE Main & Advanced Previous Year Questions",
+    details: "Solve first-order and higher-degree differential equations from past JEE examinations with shortcuts.",
+    illustrationType: "diff_eq",
+    videoId: "q9QpRlLRV0c",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A7i9Kov6hhqt2zq2VJcJgKr&si=3_gLeaGivsigd2as",
+    thumbnail: "https://i.ytimg.com/vi/q9QpRlLRV0c/hqdefault.jpg"
   },
   {
     id: "pyq-quadratic",
@@ -100,18 +111,8 @@ export const jeePyqs = [
     details: "Comprehensive solution of algebra and quadratic equations questions from recent JEE examinations.",
     illustrationType: "quadratic",
     videoId: "dSc2772LBDs",
-    playlistUrl: "https://www.youtube.com/watch?v=dSc2772LBDs&list=PLkG0JIX8a6A6-xjtuigEQ5stvVCR2GTY1",
-    thumbnail: "https://i.ytimg.com/vi/dSc2772LBDs/hqdefault.jpg"
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6kfrgNNoRxqc0ND2IrgZKA&si=sucMO1BwRvFfsqqy",
+    thumbnail: "https://i.ytimg.com/vi/tR47q3-cPFE/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4AfwIgALQBYoCDAgAEAEYWiBiKGUwDw==&rs=AOn4CLBQAL4smU3yxU-bNQb4bxqcL7TTeg"
   },
-  {
-    id: "pyq-conics",
-    name: "Conic Sections PYQs",
-    category: "Conic Sections PYQs",
-    shortDescription: "JEE Main & Advanced Parabola, Ellipse, Hyperbola",
-    details: "Solve coordinate geometry conics questions, focusing on tangent, normal, and intersection properties.",
-    illustrationType: "conic",
-    videoId: "5nKm0xECZPY",
-    playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
-    thumbnail: "https://i.ytimg.com/vi/5nKm0xECZPY/hqdefault.jpg"
-  }
+  
 ];

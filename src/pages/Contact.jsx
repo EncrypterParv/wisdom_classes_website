@@ -35,18 +35,30 @@ export default function Contact() {
       return;
     }
 
-    // Mock API Submit
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setStatus("success");
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        course: "Class 11",
-        message: "",
-      });
-    }, 1200);
+    // Format WhatsApp message with user inputs
+    const formattedMessage = `Hello, I would like to book a session / send an inquiry. Here are my details:
+• *Name:* ${form.name}
+• *Email:* ${form.email}
+• *Phone:* ${form.phone}
+• *Target Course:* ${form.course} Mathematics
+• *Message:* ${form.message}`;
+
+    const whatsappUrl = `https://wa.me/919634108610?text=${encodeURIComponent(formattedMessage)}`;
+
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, "_blank");
+
+    setIsSubmitting(false);
+    setStatus("success");
+    
+    // Reset form fields
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      course: "Class 11",
+      message: "",
+    });
   };
 
   return (

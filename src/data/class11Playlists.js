@@ -10,7 +10,7 @@ export const class11Playlists = [
     illustrationType: "limits",
     symbol: "lim x→a",
     videoId: "OIdCe3-rVv0",
-    playlistUrl: "https://www.youtube.com/watch?v=OIdCe3-rVv0&list=PLkG0JIX8a6A48RWkwjQ1ERHXv2kXM1MU-",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A48RWkwjQ1ERHXv2kXM1MU-&si=-5UYMJfbWCUkHL0I",
     category: "Calculus",
     thumbnail: "https://img.youtube.com/vi/OIdCe3-rVv0/maxresdefault.jpg"
   },
@@ -23,7 +23,7 @@ export const class11Playlists = [
     illustrationType: "derivative",
     symbol: "d/dx",
     videoId: "3z3ruWRGDqE",
-    playlistUrl: "https://www.youtube.com/watch?v=3z3ruWRGDqE&list=PLkG0JIX8a6A6CwJoTYiGXDoWGS8bfeDcl",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6CwJoTYiGXDoWGS8bfeDcl&si=mrnUmrwlXPmpkeUq",
     category: "Calculus",
     thumbnail: "https://i.ytimg.com/vi/3z3ruWRGDqE/hqdefault.jpg"
   },
@@ -36,7 +36,7 @@ export const class11Playlists = [
     illustrationType: "pnc",
     symbol: "ⁿP_r / ⁿC_r",
     videoId: "C4XHatxgImY",
-    playlistUrl: "https://www.youtube.com/watch?v=C4XHatxgImY&list=PLkG0JIX8a6A63a2pow_Wowli1B5wW-AFf",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A63a2pow_Wowli1B5wW-AFf&si=oEEbndMc6TqiBmjs",
     category: "Algebra",
     thumbnail: "https://i.ytimg.com/vi/C4XHatxgImY/hqdefault.jpg"
   },
@@ -49,7 +49,7 @@ export const class11Playlists = [
     illustrationType: "quadratic",
     symbol: "ax²+bx+c",
     videoId: "dSc2772LBDs",
-    playlistUrl: "https://www.youtube.com/watch?v=dSc2772LBDs&list=PLkG0JIX8a6A6-xjtuigEQ5stvVCR2GTY1",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6-xjtuigEQ5stvVCR2GTY1&si=Z-qrE-4PZt83YOkG",
     category: "Algebra",
     thumbnail: "https://i.ytimg.com/vi/dSc2772LBDs/hqdefault.jpg"
   },
@@ -62,7 +62,7 @@ export const class11Playlists = [
     illustrationType: "binomial",
     symbol: "(x+y)ⁿ",
     videoId: "2-UStKP5Tfg",
-    playlistUrl: "https://www.youtube.com/watch?v=2-UStKP5Tfg&list=PLkG0JIX8a6A65E2vYUgtNx_zrp0xx3dhN",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A65E2vYUgtNx_zrp0xx3dhN&si=Tz6QABdxnWMUGejA",
     category: "Algebra",
     thumbnail: "https://i.ytimg.com/vi/2-UStKP5Tfg/hqdefault.jpg"
   },
@@ -75,7 +75,7 @@ export const class11Playlists = [
     illustrationType: "sequence",
     symbol: "∑ a_n",
     videoId: "BtwZWzpo1J8",
-    playlistUrl: "https://www.youtube.com/watch?v=BtwZWzpo1J8&list=PLkG0JIX8a6A58I-Z3-gsonCp6VugKNdcy",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A58l-Z3-gsonCp6VugKNdcy&si=O7nf40Mp8F4OWdPx",
     category: "Algebra",
     thumbnail: "https://i.ytimg.com/vi/BtwZWzpo1J8/hqdefault.jpg"
   },
@@ -88,7 +88,7 @@ export const class11Playlists = [
     illustrationType: "lines",
     symbol: "y = mx+c",
     videoId: "5FlUyP881jk",
-    playlistUrl: "https://www.youtube.com/watch?v=5FlUyP881jk&list=PLkG0JIX8a6A6oCPc2KO4h9M0tlp4pEqxQ",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6oCPc2KO4h9M0tIp4pEqxQ&si=bMAPlSL9pjTv99GJ",
     category: "Geometry",
     thumbnail: "https://img.youtube.com/vi/5FlUyP881jk/maxresdefault.jpg"
   },
@@ -101,7 +101,7 @@ export const class11Playlists = [
     illustrationType: "conic",
     symbol: "x²/a² + y²/b² = 1",
     videoId: "5nKm0xECZPY",
-    playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A71k4-RZgTmxXqwIQtCOSxk&si=6MbqnlFXTqyxpfH9",
     category: "Geometry",
     thumbnail: "https://i.ytimg.com/vi/5nKm0xECZPY/hqdefault.jpg"
   },
@@ -114,7 +114,7 @@ export const class11Playlists = [
     illustrationType: "relations",
     symbol: "f: A→B",
     videoId: "1gDTcbwMls4",
-    playlistUrl: "https://www.youtube.com/watch?v=1gDTcbwMls4&list=PLkG0JIX8a6A5bLz8yv9JHTzHQu6fbnph2",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A5bLz8yv9JHTzHQu6fbnph2&si=SjjGWwYjA0P6Gr1s",
     category: "Algebra",
     thumbnail: "https://img.youtube.com/vi/1gDTcbwMls4/maxresdefault.jpg"
   },
@@ -127,7 +127,7 @@ export const class11Playlists = [
     illustrationType: "complex",
     symbol: "z = a+ib",
     videoId: "LuH7gJ3c52o",
-    playlistUrl: "https://www.youtube.com/watch?v=LuH7gJ3c52o&list=PLkG0JIX8a6AdQGGmdfm5E7CSPbQfxcUC",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6dQGGmdfm5E7CSPbQfxcUC&si=M1f8lLD9mULdTMZD",
     category: "Algebra",
     thumbnail: "https://i.ytimg.com/vi/LuH7gJ3c52o/hqdefault.jpg"
   },
@@ -140,7 +140,7 @@ export const class11Playlists = [
     illustrationType: "trig",
     symbol: "sin(x)",
     videoId: "yITZG4Jip3g",
-    playlistUrl: "https://www.youtube.com/watch?v=yITZG4Jip3g&list=PLkG0JIX8a6A7s5CqF80Inv_KxjPsrMYdI",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A7s5CqF80lnv_KxjPsrMYdl&si=KLY2clju1kaZ0BfW",
     category: "Trigonometry",
     thumbnail: "https://img.youtube.com/vi/yITZG4Jip3g/maxresdefault.jpg"
   }

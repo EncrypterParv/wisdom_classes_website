@@ -25,7 +25,7 @@ export const fallbackThumbnails = {
   "inverse-trig": "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop",
   "integration": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop",
   "differentiation-core": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop",
-  "differentiation-applied": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop",
+  "applications-of-derivatives": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop",
   "linear-programming": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
 
   // JEE Mathematics
@@ -35,6 +35,7 @@ export const fallbackThumbnails = {
   "jee-vector-3d": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop",
   "jee-probability": "https://images.unsplash.com/photo-1453733190148-c44698c26588?q=80&w=600&auto=format&fit=crop",
   "jee-integration": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop",
+  "jee-differential-equations": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop",
   "jee-quadratic": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop",
   "jee-parabola": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
   "jee-ellipse": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
@@ -42,6 +43,7 @@ export const fallbackThumbnails = {
   "jee-pair-of-lines": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
   "jee-graphs": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop",
   "pyq-integration": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop",
+  "pyq-differential-equations": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=600&auto=format&fit=crop",
   "pyq-quadratic": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop",
   "pyq-conics": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
 

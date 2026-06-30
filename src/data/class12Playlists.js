@@ -11,7 +11,7 @@ export const class12Playlists = [
     illustrationType: "probability",
     symbol: "P(A)",
     videoId: "j51_9pEP9Xs",
-    playlistUrl: "https://www.youtube.com/watch?v=j51_9pEP9Xs&list=PLkG0JIX8a6A50BYYfkPfnrhXmkO8wUpGe",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A50BYYfkPfnrhXmkO8wUpGe&si=RRW2xUqV8f9f2TfU",
     thumbnail: "https://i.ytimg.com/vi/j51_9pEP9Xs/hqdefault.jpg"
   },
   {
@@ -24,7 +24,7 @@ export const class12Playlists = [
     illustrationType: "geometry3d",
     symbol: "(x,y,z)",
     videoId: "OmUWNMmWIT0",
-    playlistUrl: "https://www.youtube.com/watch?v=OmUWNMmWIT0&list=PLkG0JIX8a6A48CinaAT4_4TNCkvCDxmKp",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A48CinaAT4_4TNCkvCDxmKp&si=yqI0iJjy1Vzmg90E",
     thumbnail: "https://i.ytimg.com/vi/OmUWNMmWIT0/hqdefault.jpg"
   },
   {
@@ -37,7 +37,7 @@ export const class12Playlists = [
     illustrationType: "vector",
     symbol: "a · b",
     videoId: "5XF_YcAEbAI",
-    playlistUrl: "https://www.youtube.com/watch?v=5XF_YcAEbAI&list=PLkG0JIX8a6A7ENjgYFvf7VpLzpIDz9uvI",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A7ENjgYFvf7VpLzplDz9uvl&si=zE0-OESduGqEgVxQ",
     thumbnail: "https://i.ytimg.com/vi/5XF_YcAEbAI/hqdefault.jpg"
   },
   {
@@ -50,7 +50,7 @@ export const class12Playlists = [
     illustrationType: "relations",
     symbol: "f:A→B",
     videoId: "AJXNObjS3B0",
-    playlistUrl: "https://www.youtube.com/watch?v=AJXNObjS3B0&list=PLkG0JIX8a6A4yJ-6yrRECgc4rn-TM2AtB",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A4yJ-6yrRECgc4rn-TM2AtB&si=JzEgId9FwAmbHIHE",
     thumbnail: "https://i.ytimg.com/vi/AJXNObjS3B0/hqdefault.jpg"
   },
   {
@@ -63,8 +63,8 @@ export const class12Playlists = [
     illustrationType: "diff_eq",
     symbol: "dy/dx",
     videoId: "09c3dDy0IK8",
-    playlistUrl: "https://www.youtube.com/watch?v=09c3dDy0lK8&list=PLkG0JIX8a6A45liwwfXuz2ESsRGOFQoTW",
-    thumbnail: null
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A45liwwfXuz2ESsRGOFQoTW&si=GN1N5jU4DlQXpedS",
+    thumbnail: "https://i.ytimg.com/vi/09c3dDy0lK8/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCREWJ2DDXLlv7lr1rAHp4DluQ0PQ"
   },
   {
     id: "matrices",
@@ -76,7 +76,7 @@ export const class12Playlists = [
     illustrationType: "matrix",
     symbol: "|A|",
     videoId: "-rUYLSTJGcc",
-    playlistUrl: "https://www.youtube.com/watch?v=-rUYLSTJGcc&list=PLkG0JIX8a6A47HbWRUXcw-W6ruAP6X-Zo",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A47HbWRUXcw-W6ruAP6X-Zo&si=excxZCMnXHOJlIKm",
     thumbnail: "https://i.ytimg.com/vi/-rUYLSTJGcc/hqdefault.jpg"
   },
   {
@@ -89,7 +89,7 @@ export const class12Playlists = [
     illustrationType: "derivative",
     symbol: "d/dx",
     videoId: "-LInTs_KDx0",
-    playlistUrl: "https://www.youtube.com/watch?v=-LlnTs_KDx0&list=PLkG0JIX8a6A4aycSfVu5vp3hNY94p_nGj",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A4aycSfVu5vp3hNY94p_nGj&si=ueFxbk_7rOAQuQRU",
     thumbnail: null
   },
   {
@@ -102,7 +102,7 @@ export const class12Playlists = [
     illustrationType: "trig",
     symbol: "sin(x)",
     videoId: "JNDCfGVH1iU",
-    playlistUrl: "https://www.youtube.com/watch?v=JNDCfGVH1iU&list=PLkG0JIX8a6A4fZAb3r3u1HF0veq4Ad_Bp",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A4fZAb3r3u1HF0veq4Ad_Bp&si=SU8KU2HAHtUoBc28",
     thumbnail: "https://i.ytimg.com/vi/JNDCfGVH1iU/hqdefault.jpg"
   },
   {
@@ -115,7 +115,7 @@ export const class12Playlists = [
     illustrationType: "integration",
     symbol: "∫f(x)dx",
     videoId: "2EGWNGtXwug",
-    playlistUrl: "https://www.youtube.com/watch?v=2EGWNGtXwug&list=PLkG0JIX8a6A6DeWIwaJK9B3aBq36uAEd6",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6DeWIwaJK9B3aBq36uAEd6&si=3aJ3diGraqF6YeFz",
     thumbnail: "https://i.ytimg.com/vi/2EGWNGtXwug/hqdefault.jpg"
   },
   {
@@ -128,21 +128,21 @@ export const class12Playlists = [
     illustrationType: "derivative",
     symbol: "d/dx",
     videoId: "pBizgy_IT2g",
-    playlistUrl: "https://www.youtube.com/watch?v=pBizgy_lT2g&list=PLkG0JIX8a6A4JMEYHcl6hdnxUcAy4Txoz",
-    thumbnail: null
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A4JMEYHcl6hdnxUcAy4Txoz&si=spgrMcPJcseIPMfX",
+    thumbnail: "https://i.ytimg.com/vi/pBizgy_lT2g/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA4QnFidpqVBj74QCHelrqTBvP8Pg"
   },
   {
-    id: "differentiation-applied",
-    name: "Differentiation (Applied)",
-    title: "Differentiation (Applied)",
+    id: "applications-of-derivatives",
+    name: "Applications of Derivatives",
+    title: "Applications of Derivatives",
     category: "Calculus",
     shortDescription: "Tangents, normals, approximations & maxima/minima",
     details: "Apply differentiation to rates of change, increasing & decreasing functions, tangents and normals, approximations, and maxima & minima.",
     illustrationType: "derivative",
     symbol: "d/dx",
-    videoId: "DSigzKc_vx8",
-    playlistUrl: "https://www.youtube.com/watch?v=DSigzKc_vx8&list=PLkG0JIX8a6A7rs58I71G2I5z0agdPA8Qd",
-    thumbnail: "https://i.ytimg.com/vi/DSigzKc_vx8/hqdefault.jpg"
+    videoId: "-WLJpc5b4jc",
+    playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A7Gy8D2jp3SWFmWPcBhzGpm&si=yWnqJp0eVcvxT2IE",
+    thumbnail: "https://i.ytimg.com/vi/-WLJpc5b4jc/hqdefault.jpg"
   },
   {
     id: "linear-programming",
@@ -154,7 +154,7 @@ export const class12Playlists = [
     illustrationType: "lpp",
     symbol: "Max Z",
     videoId: "5nKm0xECZPY",
-    playlistUrl: "https://www.youtube.com/watch?v=5nKm0xECZPY&list=PLkG0JIX8a6A71k4-RZgTmxXqwlQtCOSxk",
+    playlistUrl: "https://youtu.be/2LQ-X56OYaY?si=M4sSoE-HV0NHaYY4",
     thumbnail: "https://i.ytimg.com/vi/5nKm0xECZPY/hqdefault.jpg"
   }
 ];
