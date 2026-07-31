@@ -50,7 +50,8 @@ const resourcesData = [
     title: "Trigonometry Formula Sheet",
     category: "Trigonometry",
     description: "Core trigonometric identities and equations.",
-    image: "/trigonometry-formulas.jpg"
+    image: "/trigonometry-formulas.jpg",
+    pdf: "/trigonometry-formulas.pdf"
   }
 ];
 
@@ -68,8 +69,10 @@ export default function FreeResourcesSection() {
 
   const handleDownload = (resource) => {
     const link = document.createElement("a");
-    link.href = resource.image;
-    link.download = `${resource.title.replace(/\s+/g, "_")}.jpg`;
+    const downloadFile = resource.pdf || resource.image;
+    const extension = resource.pdf ? "pdf" : "jpg";
+    link.href = downloadFile;
+    link.download = `${resource.title.replace(/\s+/g, "_")}.${extension}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

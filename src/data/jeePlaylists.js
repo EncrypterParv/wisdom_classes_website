@@ -2,6 +2,39 @@
 
 export const jeeChapters = [
   {
+    id: "jee-matrices",
+    name: "Matrices",
+    category: "Algebra",
+    shortDescription: "Matrix algebra, operations, symmetric & skew-symmetric matrices",
+    details: "Master matrix multiplication, transpose, determinant relations, adjoint and inverse of matrices, and systems of linear equations for JEE.",
+    illustrationType: "matrix",
+    videoId: "t6b8X8d8Ugg",
+    playlistUrl: "https://youtu.be/t6b8X8d8Ugg?si=AsW4TicBuVJhFUYB",
+    thumbnail: "https://i.ytimg.com/vi/t6b8X8d8Ugg/hqdefault.jpg"
+  },
+  {
+    id: "jee-determinants",
+    name: "Determinants",
+    category: "Algebra",
+    shortDescription: "Properties of determinants, Cramer's rule & linear equations",
+    details: "Learn expansion techniques, properties of determinants, area of triangles, matrix adjoint, Cramer's rule, and consistent/inconsistent systems.",
+    illustrationType: "matrix",
+    videoId: "IltwOvKGrO4",
+    playlistUrl: "https://youtu.be/IltwOvKGrO4?si=Dh-9hXvm0qM-4255",
+    thumbnail: "https://i.ytimg.com/vi/IltwOvKGrO4/hqdefault.jpg"
+  },
+  {
+    id: "jee-inverse-trig",
+    name: "Inverse Trigonometry",
+    category: "Trigonometry",
+    shortDescription: "Principal values, domains, ranges & inverse identities",
+    details: "Master principal value branches, domain and range properties, sum & difference inverse formulas, and solving trigonometric equations.",
+    illustrationType: "trig",
+    videoId: "BKfWK2WaLRk",
+    playlistUrl: "https://youtu.be/BKfWK2WaLRk?si=RWG016luHbcgqMlM",
+    thumbnail: "https://i.ytimg.com/vi/BKfWK2WaLRk/hqdefault.jpg"
+  },
+  {
     id: "jee-integration",
     name: "Integration",
     category: "Calculus",
@@ -113,6 +146,5 @@ export const jeePyqs = [
     videoId: "dSc2772LBDs",
     playlistUrl: "https://youtube.com/playlist?list=PLkG0JIX8a6A6kfrgNNoRxqc0ND2IrgZKA&si=sucMO1BwRvFfsqqy",
     thumbnail: "https://i.ytimg.com/vi/tR47q3-cPFE/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4AfwIgALQBYoCDAgAEAEYWiBiKGUwDw==&rs=AOn4CLBQAL4smU3yxU-bNQb4bxqcL7TTeg"
-  },
-  
+  }
 ];

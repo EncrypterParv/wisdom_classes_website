@@ -4,6 +4,7 @@ import { BookOpen, Video, ArrowLeft, Search, Play, Sparkles } from "lucide-react
 import { Link } from "react-router-dom";
 import { class12Playlists } from "../data/class12Playlists";
 import { MathThumbnail } from "../utils/getThumbnail";
+import OneShotLecturesSection from "../components/OneShotLecturesSection";
 
 
 // Mathematical Custom SVG Illustrations for each Class 12 topic
@@ -253,6 +254,7 @@ const ChapterCard = ({ chapter, index }) => {
 };
 
 export default function Class12() {
+  const [activeTab, setActiveTab] = useState("playlists"); // "playlists" | "oneshot"
   const [searchQuery, setSearchQuery] = useState("");
 
   const chaptersData = class12Playlists;
@@ -286,7 +288,7 @@ export default function Class12() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-forest text-cream rounded-3xl p-8 md:p-12 border border-gold/20 shadow-xl mb-16 relative overflow-hidden text-left"
+          className="bg-forest text-cream rounded-3xl p-8 md:p-12 border border-gold/20 shadow-xl mb-12 relative overflow-hidden text-left"
         >
           {/* Decorative mathematical formula in header */}
           <div className="absolute right-12 bottom-0 opacity-[0.03] select-none pointer-events-none font-serif text-9xl">
@@ -302,7 +304,7 @@ export default function Class12() {
               Class 12 Mathematics
             </h1>
             <p className="text-cream/80 text-base md:text-lg leading-relaxed font-sans">
-              Complete Chapter-Wise Mathematics Learning Library. Explore complete step-by-step lecture playlists for all core Class 12 topics, curated for board exams and competitive entrance preparation.
+              Complete Chapter-Wise Mathematics Learning Library. Explore step-by-step lecture playlists and high-efficiency one shot revision lectures for all core Class 12 topics.
             </p>
 
             {/* Quick Metrics */}
@@ -311,63 +313,115 @@ export default function Class12() {
                 <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center">
                   <BookOpen className="w-4.5 h-4.5" />
                 </div>
-                <span className="font-sans font-medium text-sm text-cream/90">12 Core Chapters</span>
+                <span className="font-sans font-medium text-sm text-cream/90">14 Core Chapters</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center">
                   <Video className="w-4.5 h-4.5" />
                 </div>
-                <span className="font-sans font-medium text-sm text-cream/90">180+ Video Lectures</span>
+                <span className="font-sans font-medium text-sm text-cream/90">Playlists & One Shots</span>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Search Bar section */}
-        <div className="mb-12 max-w-xl text-left">
-          <label htmlFor="chapter-search" className="block text-sm font-sans font-semibold text-forest mb-2">
-            Search Chapters
-          </label>
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-forest/40" />
-            <input
-              id="chapter-search"
-              type="text"
-              placeholder="Search by topic, keyword (e.g. 'prob', 'vec', 'diff')..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-6 py-3.5 bg-white border border-forest/10 rounded-2xl font-sans text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300 shadow-sm"
-            />
+        {/* Segmented Switcher Toggle */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-cream-light p-1.5 rounded-2xl sm:rounded-full border border-forest/10 flex flex-col sm:flex-row shadow-inner w-full sm:w-auto">
+            <button
+              onClick={() => {
+                setActiveTab("playlists");
+                setSearchQuery("");
+              }}
+              className={`px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer text-center ${
+                activeTab === "playlists" 
+                  ? "bg-forest text-on-forest shadow-md" 
+                  : "text-forest/70 hover:text-forest"
+              }`}
+            >
+              Chapter-Wise Playlists
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab("oneshot");
+                setSearchQuery("");
+              }}
+              className={`px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-full font-sans font-semibold text-sm transition-all duration-300 cursor-pointer text-center ${
+                activeTab === "oneshot" 
+                  ? "bg-forest text-on-forest shadow-md" 
+                  : "text-forest/70 hover:text-forest"
+              }`}
+            >
+              12th One Shot Lectures
+            </button>
           </div>
         </div>
 
-        {/* Playlist Grid Section */}
-        <div className="text-left mb-8">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-forest">
-            Chapter Playlists
-          </h2>
-          <p className="text-charcoal/70 text-sm font-sans mt-2">
-            Click on any chapter card to open the YouTube playlist in a new browser tab.
-          </p>
-        </div>
-
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredChapters.map((chapter, index) => (
-              <ChapterCard key={chapter.id} chapter={chapter} index={index} />
-            ))}
-          </AnimatePresence>
-        </div>
-
-        {filteredChapters.length === 0 && (
+        {/* TAB 1: CHAPTER-WISE PLAYLISTS */}
+        {activeTab === "playlists" && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-16 bg-white rounded-3xl border border-forest/5 p-8 max-w-md mx-auto mt-12"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <p className="text-charcoal/75 font-sans font-medium text-lg">No chapters matches your search query.</p>
-            <p className="text-charcoal/50 font-sans text-sm mt-2">Try searching with other keywords or terms.</p>
+            {/* Search Bar section */}
+            <div className="mb-12 max-w-xl text-left">
+              <label htmlFor="chapter-search" className="block text-sm font-sans font-semibold text-forest mb-2">
+                Search Chapters
+              </label>
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-forest/40" />
+                <input
+                  id="chapter-search"
+                  type="text"
+                  placeholder="Search by topic, keyword (e.g. 'prob', 'vec', 'diff')..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-6 py-3.5 bg-white border border-forest/10 rounded-2xl font-sans text-sm text-charcoal placeholder-charcoal/40 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300 shadow-sm"
+                />
+              </div>
+            </div>
+
+            {/* Playlist Grid Header */}
+            <div className="text-left mb-8">
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-forest">
+                Chapter Playlists
+              </h2>
+              <p className="text-charcoal/70 text-sm font-sans mt-2">
+                Click on any chapter card to open the YouTube playlist in a new browser tab.
+              </p>
+            </div>
+
+            {/* Grid Container */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <AnimatePresence>
+                {filteredChapters.map((chapter, index) => (
+                  <ChapterCard key={chapter.id} chapter={chapter} index={index} />
+                ))}
+              </AnimatePresence>
+            </div>
+
+            {filteredChapters.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-16 bg-white rounded-3xl border border-forest/5 p-8 max-w-md mx-auto mt-12"
+              >
+                <p className="text-charcoal/75 font-sans font-medium text-lg">No chapters matches your search query.</p>
+                <p className="text-charcoal/50 font-sans text-sm mt-2">Try searching with other keywords or terms.</p>
+              </motion.div>
+            )}
+          </motion.div>
+        )}
+
+        {/* TAB 2: ONE SHOT LECTURES */}
+        {activeTab === "oneshot" && (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <OneShotLecturesSection />
           </motion.div>
         )}
 
@@ -375,3 +429,5 @@ export default function Class12() {
     </div>
   );
 }
+
+

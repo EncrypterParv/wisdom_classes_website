@@ -8,6 +8,7 @@ import GallerySection from "../components/GallerySection";
 import TestimonialCard from "../components/TestimonialCard";
 import FreeResourcesSection from "../components/FreeResourcesSection";
 
+
 // Dynamic Counter Hook for animating statistics
 const StatCounter = ({ value, duration = 2 }) => {
   const [count, setCount] = useState(0);
